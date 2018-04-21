@@ -4,3 +4,4 @@
 - Jake Lipson
 - Matthew Hormis
 - Joseph Kass
+-Qian Zhang

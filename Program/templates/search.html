@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+	<p>Search for Trump's tweets</p>
+    <form action="/search-post" method="post">
+        {% csrf_token %}
+        <p>Start from</p>
+        <p>
+        	Year<input type="start time1" name="start_y">
+        	Month<input type="start time2" name="start_m">
+        	Day<input type="start time3" name="start_d">
+        </p>
+        <p>End to</p>
+        <p>
+        	Year<input type="end time1" name="end_y">
+        	Month<input type="end time2" name="end_m">
+        	Day<input type="end time3" name="end_d">
+        </p>
+        </p>
+        <input type="submit" value="Search">
+    </form>
+ 	<ul>  
+		{% for item in item_list %}  
+			<li>{{item.created_at}}  : {{ item.text }}</li>  
+		{% endfor %}  
+	</ul> 
+    
+</body>
+</html>
